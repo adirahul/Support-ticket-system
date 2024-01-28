@@ -23,7 +23,7 @@ const SupportTickets = () => {
   const getAllTickets = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/api/support-tickets/tickets?sortBy=${sortBy.field}&order=${sortBy.order}`
+        `${process.env.API_ENDPOINT}/api/support-tickets/tickets?sortBy=${sortBy.field}&order=${sortBy.order}`
       );
       setTickets(data.tickets);
     } catch (error) {

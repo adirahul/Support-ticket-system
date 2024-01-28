@@ -55,7 +55,7 @@ const AgentCreation = () => {
 
       try {
         const res = await axios.post(
-          `http://localhost:8080/api/support-agents/create-agent`,
+          `${process.env.API_ENDPOINT}/api/support-agents/create-agent`,
           { ...formData }
         );
         if (res.data.success) {

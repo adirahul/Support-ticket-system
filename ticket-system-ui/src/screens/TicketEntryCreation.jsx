@@ -60,7 +60,7 @@ const TicketEntryCreation = () => {
       
       try {
         const res = await axios.post(
-          `http://localhost:8080/api/support-tickets/create-ticket`,
+          `${process.env.API_ENDPOINT}/api/support-tickets/create-ticket`,
           { ...formData }
         );
         if (res.data.success) {
@@ -99,7 +99,7 @@ const TicketEntryCreation = () => {
 
       try {
         const res = await axios.post(
-          `http://localhost:8080/api/support-tickets/assign-ticket`,
+          `${process.env.API_ENDPOINT}/api/support-tickets/assign-ticket`,
           { ...formData }
         );
         if (res.data.success) {

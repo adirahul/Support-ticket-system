@@ -11,7 +11,8 @@ const FilterTickets = ({setTickets}) => {
     try {
         e.preventDefault();
         const {data} = await axios.get(
-            `http://localhost:8080/api/support-tickets/tickets/${keyword}`
+            
+            `${process.env.API_ENDPOINT}/api/support-tickets/tickets/${keyword}`
         );
         setTickets(data.tickets);
     } catch (e) {
