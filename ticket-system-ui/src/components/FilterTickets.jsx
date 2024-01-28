@@ -12,7 +12,7 @@ const FilterTickets = ({setTickets}) => {
         e.preventDefault();
         const {data} = await axios.get(
             
-            `${process.env.API_ENDPOINT}/api/support-tickets/tickets/${keyword}`
+            `https://support-ticket-system-api-murex.vercel.app/api/support-tickets/tickets/${keyword}`
         );
         setTickets(data.tickets);
     } catch (e) {

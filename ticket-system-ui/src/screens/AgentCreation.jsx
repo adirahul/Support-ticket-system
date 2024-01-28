@@ -55,7 +55,7 @@ const AgentCreation = () => {
 
       try {
         const res = await axios.post(
-          `${process.env.API_ENDPOINT}/api/support-agents/create-agent`,
+          `https://support-ticket-system-api-murex.vercel.app/api/support-agents/create-agent`,
           { ...formData }
         );
         if (res.data.success) {

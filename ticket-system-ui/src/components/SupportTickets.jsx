@@ -23,7 +23,7 @@ const SupportTickets = () => {
   const getAllTickets = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.API_ENDPOINT}/api/support-tickets/tickets?sortBy=${sortBy.field}&order=${sortBy.order}`
+        `https://support-ticket-system-api-murex.vercel.app/api/support-tickets/tickets?sortBy=${sortBy.field}&order=${sortBy.order}`
       );
       setTickets(data.tickets);
     } catch (error) {
