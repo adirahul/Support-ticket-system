@@ -11,7 +11,7 @@ function App() {
         <Route path="/" element={<Dashboard/>}/>
         <Route path="/create-ticket" element={<TicketEntryCreation/>}/>
         <Route path="/create-agent" element={<AgentCreation/>}/>
-        <Route path="/tickets" element={<SupportTickets/>}/>
+        <Route path="/tickets/:sortBy?" element={<SupportTickets/>}/>
       </Routes>
     </>
   );
