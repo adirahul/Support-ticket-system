@@ -60,7 +60,7 @@ const TicketEntryCreation = () => {
       
       try {
         const res = await axios.post(
-          `${process.env.API_ENDPOINT}/api/support-tickets/create-ticket`,
+          `https://support-ticket-system-api-murex.vercel.app/api/support-tickets/create-ticket`,
           { ...formData }
         );
         if (res.data.success) {
